@@ -44,14 +44,14 @@ const Home = () => {
 
     return (
         <div className='grid lg:grid-cols-3 gap-4 sm:grid-cols-1 my-3'>
-            <div className="phones-container grid lg:col-span-2 md:col-span-2 gap-4 sm:grid-cols-1 my-3">
+            <div className="phones-container grid lg:col-span-2 order-1 md:col-span-2 gap-4 order-1 sm:grid-cols-1 my-3 order-2">
                 <div className='grid lg:grid-cols-3 gap-4 sm:grid-cols-1 my-3'>
                     {
                         phones.map(ph => <Phone phone={ph} key={ph.id} handleAddToCart={handleAddToCart}></Phone>)
                     }
                 </div>
             </div>
-            <div className="cart bg-red-100">
+            <div className="cart bg-red-100 sm:order-1 lg:order-2 md:order-2">
                 <h1 className='text-4xl p-2 center'>Cart</h1>
                 {cart.length > 3 ? <h1>good job!! thanks for shopping</h1> : <h1>you have added {cart.length} product</h1>}
                 {

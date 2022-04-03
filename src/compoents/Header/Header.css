@@ -1,0 +1,30 @@
+html,
+body {
+    font-family: "Rubik", sans-serif;
+}
+
+/* navigation 
+ - show navigation always on the large screen devices with (min-width:1024)
+*/
+
+@media (min-width: 1024px) {
+    .top-navbar {
+        display: inline-flex !important;
+    }
+}
+
+
+
+/*
+// <nav className='bg-blue-500 py-3 font-semibold text-white'>
+        //     <div onClick={() => setOpen(!open)} className='w-6 h-6 md:hidden'>
+        //         {open ? <XIcon></XIcon> : <MenuIcon></MenuIcon>}
+        //     </div>
+
+        //     <div className={`md:flex justify-center absolute md:static duration-500 ease-in bg-blue-500 w-full ${open ? 'top-8' : 'top-[-150px]'} sm:bg-blue-500`} > 
+        //         {
+            //             routes.map(route => <Links routes={route} key={routes.id}></Links>)
+            //         }
+            //     </div>
+            // </nav>
+    */

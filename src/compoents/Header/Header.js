@@ -7,12 +7,12 @@ const Header = () => {
     const [open, setOpen] = useState(false);
     const routes = [
         { id: 1, name: 'Home', link: '/' },
-        { id: 1, name: 'shop', link: '/shop' },
-        { id: 1, name: 'Deals', link: '/deals' },
-        { id: 1, name: 'Reviews', link: '/reviews' },
-        { id: 1, name: 'Contact', link: '/contact' },
+        { id: 4, name: 'Reviews', link: '/reviews' },
+        { id: 6, name: 'Login', link: '/login' },
     ]
     return (
+
+
         <nav className='bg-blue-500 py-3 font-semibold text-white'>
             <div onClick={() => setOpen(!open)} className='w-6 h-6 md:hidden'>
                 {open ? <XIcon></XIcon> : <MenuIcon></MenuIcon>}

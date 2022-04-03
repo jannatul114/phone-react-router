@@ -1,7 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Phone = ({ phone, handleAddToCart }) => {
+
+    const navigate = useNavigate()
+    const showPhoneDetail = () => {
+        const path = `/phone/${phone.slug}`
+        navigate(path);
+    }
     // console.log();
     return (
         <div className=''>
@@ -17,11 +23,21 @@ const Phone = ({ phone, handleAddToCart }) => {
                     <button onClick={() => handleAddToCart(phone)} className="px-4 mr-2 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Add to cart</button>
 
 
-                    <Link to={'/phone/' + phone.slug} className="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">detailse</Link>
+                    <button onClick={showPhoneDetail} className="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">detailse</button>
                 </div>
             </div>
         </div>
     );
 };
 
+
+
+
+/* 
+*/
+
+
+
+
+// to={'/phone/' + phone.slug}
 export default Phone;
